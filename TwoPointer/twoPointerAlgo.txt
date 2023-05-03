@@ -1,0 +1,10 @@
+Where we used Two Pointers approach?    
+    squaring a sorted array
+    triplest the sum to zero
+    comparing the strings that contains backspaces
+
+Ways to identify the Two Pointers method-
+    It will features problems where we deal with the sorted arrray(or linked list) and need to 
+    find the set of elements that fulfill certain constraints.
+
+    The set of the Element in the pair,triplet or even a subarray.
