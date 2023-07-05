@@ -1,8 +1,13 @@
 public class fibonacii {
     public static void main(String[] args) {
         int n = 4;
+        // recursive appraoch
         System.out.println(fibRecursive(n));
+        // top down
+        System.out.println(fibTopdown(n));
+        // dp bottom up
         System.out.println(fibDp(n));
+        // optimised solution
         System.out.println(nthFib(n));
     }
 
@@ -14,7 +19,23 @@ public class fibonacii {
         return fibRecursive(n - 1) + fibRecursive(n - 2);
     }
 
-    // dp code
+    // top down approach
+    public static int fibTopdown(int n){
+        int[] dp=new int[n+1];
+        return topdown(n,dp);
+    }
+    public static int topdown(int n,int[] memo){
+        if(n<=1){
+            return n;
+        }
+        if(memo[n]!=0){
+            return memo[n];
+        }
+        memo[n]=topdown(n-1,memo)+topdown(n-2,memo);
+        return memo[n];
+    }
+
+    // dp code ->bottom up
     public static int fibDp(int n) {
         if (n <= 1) {
             return n;
