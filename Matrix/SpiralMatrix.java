@@ -18,33 +18,28 @@ public class SpiralMatrix {
         while (rowStart <= rowEnd && colStart <= colEnd) {
             for (int i = colStart; i <= colEnd; i++) {
                 System.out.print(matrix[rowStart][i] + ",");
-                
+
             }
             rowStart = rowStart + 1;
             for (int i = rowStart; i <= rowEnd; i++) {
                 System.out.print(matrix[i][colEnd] + ",");
-               
+
             }
             colEnd = colEnd - 1;
             if (rowStart <= rowEnd) {
                 for (int i = colEnd; i >= colStart; i--) {
                     System.out.print(matrix[rowEnd][i] + ",");
-                  
+
                 }
                 rowEnd = rowEnd - 1;
             }
             if (colStart <= colEnd) {
                 for (int i = rowEnd; i >= rowStart; i--) {
                     System.out.print(matrix[i][colStart] + ",");
-                   
+
                 }
                 colStart = colStart + 1;
             }
         }
     }
-=======
-    }E
-    // Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
-    // Output: [1,2,3,6,9,8,7,4,5]
->>>>>>> 2d1728a29ec5f58401ab3955cd4ff5cbd503c449
 }

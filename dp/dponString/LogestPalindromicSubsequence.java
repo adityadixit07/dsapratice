@@ -1,3 +1,4 @@
+package dponString;
 public class LogestPalindromicSubsequence {
     public static void main(String[] args) {
         String s = "bbabcab";
@@ -38,7 +39,7 @@ public class LogestPalindromicSubsequence {
                 ans = s.charAt(i) + ans;
                 i--;
                 j--;
-            } else if (dp[i - 1][j] > dp[i][j - 1]) {
+            } else if (s.charAt(i-1) >revS.charAt(j-1)) {
                 i--;
             } else {
                 j--;
